@@ -10,7 +10,7 @@ If you prefer npm way, you should manually call `init` function to pass Vue cons
 
 ```javascript
 import Vue from 'vue'
-import weex from 'weex-vue-render'
+import weex from 'weex-vue-s-render'
 weex.init(Vue)
 
 import App from 'App.vue'
@@ -21,7 +21,7 @@ If you perfer cdn way, and use script tag to import a script link, just import i
 
 ```html
 <script>{{Vue}}</script>
-<script>{{weex-vue-render}}</script>
+<script>{{weex-vue-s-renderr}}</script>
 <script>{{your js bundle}}</script>
 ```
 
@@ -35,7 +35,7 @@ To use the render-core and the plugins, just install the plugins in your entry f
 import Vue from 'vue'
 
 // import render-core.
-import weex from 'weex-vue-render/dist/index.core'
+import weex from 'weex-vue-s-render/dist/index.core'
 
 // import the plugins (components and modules) you want to use.
 import slider from 'weex-vue-slider'
@@ -127,7 +127,7 @@ vue: {
 
 #### 0.12.1
 
-* pack a core sdk for weex-vue-render into `weex-vue-render/dist/index.core.js`.
+* pack a core sdk for weex-vue-s-render into `weex-vue-s-render/dist/index.core.js`.
 * pack modules and components into npm packages, and make them able to install.
 
 #### 0.12.3

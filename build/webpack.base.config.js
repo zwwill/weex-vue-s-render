@@ -3,6 +3,7 @@ const webpack = require('webpack')
 const merge = require('webpack-merge')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const vueLoaderConfig = require('./vue-loader.config.js')
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const config = require('../config')
 const { resolve } = require('./utils')
 const { getWebEntries, getNativeEntries } = require('./get-entries')
@@ -34,7 +35,16 @@ var webConfig = merge(baseConfig, {
       test: /\.vue$/,
       loader: 'vue-loader',
       options: vueLoaderConfig
-    }],
+    },{
+      test: /\.css$/,
+      loader: ExtractTextPlugin.extract({
+        use: [
+          {
+            loader: 'css-loader'
+          }
+        ]
+      })
+    }]
   },
   output: {
     filename: '[name].js'
@@ -44,7 +54,8 @@ var webConfig = merge(baseConfig, {
       banner: '// NOTE: for vue2.0 and platform:web only.\n',
       raw: true,
       exclude: 'Vue'
-    })
+    }),
+    new ExtractTextPlugin('css/[name].css')
   ]
 })
 
@@ -53,7 +64,7 @@ var nativeConfig = merge(baseConfig, {
     rules: [{
       test: /\.vue$/,
       loader: 'weex-loader'
-    }],
+    }]
   },
   output: {
     filename: '[name].js'

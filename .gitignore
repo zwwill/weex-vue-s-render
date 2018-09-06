@@ -72,6 +72,6 @@ examples/debug
 examples/bundle-entry
 
 # dist
-packages/
+#packages/
 public/
 test/bundles/

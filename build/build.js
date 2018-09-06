@@ -64,11 +64,11 @@ function report (filePath) {
 }
 
 const configs = {
-  'weex-vue-render': {
-    input: resolve('packages/weex-vue-render/src/index.js'),
+  'weex-vue-s-render': {
+    input: resolve('packages/weex-vue-s-render/src/index.js'),
     output: {
       name: 'WeexVueRender',
-      file: resolve('packages/weex-vue-render/dist/index.js'),
+      file: resolve('packages/weex-vue-s-render/dist/index.js'),
       format: 'umd',
       banner:`\nconsole.log('START WEEX VUE RENDER: ${version}, Build ${now()}.');\n\n`
     },
@@ -90,11 +90,11 @@ const configs = {
       })
     ]
   },
-  'weex-vue-render-core': {
-    input: resolve('packages/weex-vue-render/src/index.core.js'),
+  'weex-vue-s-render-core': {
+    input: resolve('packages/weex-vue-s-render/src/index.core.js'),
     output: {
       name: 'WeexVueRenderCore',
-      file: resolve('packages/weex-vue-render/dist/index.core.js'),
+      file: resolve('packages/weex-vue-s-render/dist/index.core.js'),
       format: 'umd',
       banner:`\nconsole.log('START WEEX VUE RENDER CORE: ${version}, Build ${now()}.');\n\n`
     },
@@ -110,7 +110,7 @@ const configs = {
       })
     ]
   }
-  // 'weex-vue-render-plugins': {
+  // 'weex-vue-s-render-plugins': {
   //   format: 'umd',
   //   plugins: [
   //     postcss(),
@@ -181,17 +181,17 @@ else {
 }
 
 function copyReadme (pkgName) {
-  if (pkgName === 'weex-vue-render') {
+  if (pkgName === 'weex-vue-s-render') {
     const fromMd = fs.readFileSync(resolve('README.md'))
-    const toMdPath = resolve('packages/weex-vue-render/README.md')
+    const toMdPath = resolve('packages/weex-vue-s-render/README.md')
     fs.outputFileSync(toMdPath, fromMd)
   }
 }
 
 function copyVersion (pkgName) {
-  if (pkgName === 'weex-vue-render') {
+  if (pkgName === 'weex-vue-s-render') {
     const fromPkg = fs.readJsonSync(resolve('package.json'))
-    const toPkgPath = resolve('packages/weex-vue-render/package.json')
+    const toPkgPath = resolve('packages/weex-vue-s-render/package.json')
     const toPkg = fs.readJsonSync(toPkgPath)
     toPkg.version = fromPkg.version
     fs.outputJsonSync(toPkgPath, toPkg, {
@@ -242,9 +242,9 @@ function runRollup (config) {
 function build (name) {
   let pkgName
   switch (name) {
-    case 'vue': pkgName = 'weex-vue-render'; break;
-    case 'core': pkgName = 'weex-vue-render-core'; break;
-    case 'plugins': pkgName = 'weex-vue-render-plugins'; break;
+    case 'vue': pkgName = 'weex-vue-s-render'; break;
+    case 'core': pkgName = 'weex-vue-s-render-core'; break;
+    case 'plugins': pkgName = 'weex-vue-s-render-plugins'; break;
     default:
       return;
   }
@@ -262,7 +262,7 @@ function build (name) {
         const outputFile = config.output.file
         const basename = path.basename(outputFile).replace('index', 'render')
         fs.copy(config.output.file, utils.resolve(`public/assets/${basename}`))
-        // cpy version info to packages/weex-vue-render
+        // cpy version info to packages/weex-vue-s-render
         copyVersion(pkgName)
         copyReadme(pkgName)
         const cjsConfig = getConfig(pkgName, false, {

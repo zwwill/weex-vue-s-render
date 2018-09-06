@@ -3,7 +3,7 @@
   "description": "Web server renderer for weex project written in Vue DSL.",
   "version": "1.0.2",
   "license": "Apache-2.0",
-  "main": "packages/weex-vue-render/src/index.js",
+  "main": "packages/weex-vue-s-render/src/index.js",
   "keywords": [
     "weex",
     "vue",
