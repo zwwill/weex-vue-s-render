@@ -1,26 +1,20 @@
-# weex-vue-render
+# weex-vue-s-render
 
-Web renderer for weex project. Support Vue 2.x syntax.
-
-[![build](https://travis-ci.org/weexteam/weex-vue-render.svg?branch=master)](https://travis-ci.org/weexteam/weex-vue-render)
-[![vuejs2.x](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://img.shields.io/badge/vue-2.x-brightgreen.svg)
-[![pkg](https://img.shields.io/npm/v/weex-vue-render.svg?style=flat)](https://npmjs.com/package/weex-vue-render)
-[![down](https://img.shields.io/npm/dm/weex-vue-render.svg)](https://npmjs.com/package/weex-vue-render)
-[![Package Quality](http://npm.packagequality.com/shield/weex-vue-render.svg)](http://packagequality.com/#?package=weex-vue-render)
+Web server renderer for weex project. Support Vue 2.x syntax.
 
 ## How To Use
 
 We strongly suggest you use v1.x instead of 0.12.x, according to performance issue.
 
 ```shell
-npm install weex-vue-render
+npm install weex-vue-s-render
 ```
 
 ```javascript
 // import vue runtime.
 const Vue = require('vue/dist/vue.runtime.common').default
-// import weex-vue-render
-const weex = require('weex-vue-render')
+// import weex-vue-s-render
+const weex = require('weex-vue-s-render')
 // init the weex instance.
 weex.init(Vue)
 // import your .vue App.
@@ -37,7 +31,7 @@ new App()
 
 ```html
 <script>{{Vue runtime}}</script>
-<script>{{weex-vue-render}}</script>
+<script>{{weex-vue-s-render}}</script>
 <script>{{your web.bundle.js}}</script>
 ```
 
@@ -47,7 +41,7 @@ new App()
 
 Use [vue-loader](https://github.com/vuejs/vue-loader) to pack your code for web.bundle.js.
 
-If you are using weex-vue-render@**1.x** , You should definitely use below plugins to get things work:
+If you are using weex-vue-s-render@**1.x** , You should definitely use below plugins to get things work:
 
 * weex-vue-precompiler
 * autoprefixer
@@ -95,7 +89,7 @@ The content of your entry file `main.js` should be like this:
 
 ```javascript
 // import Vue runtime if you like.
-// import weex-vue-render if you like.
+// import weex-vue-s-render if you like.
 // init weex if you imported it.
 // at least it should have this:
 import App from './your/App.vue'
@@ -128,7 +122,7 @@ You should use the previous mentioned plugins in your vue-loader configuration.
 ## Develop
 
 ```shell
-# build for weex-vue-render package
+# build for weex-vue-s-render package
 npm run build
 # debug and serve examples
 npm run dev

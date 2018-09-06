@@ -216,13 +216,13 @@ function updateWatchAppearList (container) {
  * inject removeChild function to watch disappear and offsetDisappear events.
  */
 if (!window._rmInjected) {
-  window._rmInjected = true
-  const nativeRemove = HTMLElement.prototype.removeChild
-  HTMLElement.prototype.removeChild = function (el) {
-    el._visible && triggerAppearEvent(el, 'disappear', null)
-    el._offsetVisible && triggerAppearEvent(el, 'offsetDisappear', null)
-    nativeRemove.apply(this, arguments)
-  }
+  // window._rmInjected = true
+  // const nativeRemove = HTMLElement.prototype.removeChild
+  // HTMLElement.prototype.removeChild = function (el) {
+  //   el._visible && triggerAppearEvent(el, 'disappear', null)
+  //   el._offsetVisible && triggerAppearEvent(el, 'offsetDisappear', null)
+  //   nativeRemove.apply(this, arguments)
+  // }
 }
 
 /**

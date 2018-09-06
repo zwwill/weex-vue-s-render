@@ -1,3 +1,16 @@
+if (!global.window) {
+  const JSDOM = require('jsdom').JSDOM
+  const window = (new JSDOM('', {
+    pretendToBeVisual: true,
+    url: 'http://127.0.0.1'
+  })).window
+  for (const k in window) {
+    if (!global[k]) {
+      global[k] = window[k]
+    }
+  }
+  global.window = global
+}
 import weex from '../../../src'
 
 import components from '../../../src/components'

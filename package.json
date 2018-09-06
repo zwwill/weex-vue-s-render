@@ -1,9 +1,9 @@
 {
-  "name": "weex-vue-render",
-  "description": "Web renderer for weex project written in Vue DSL.",
-  "version": "1.0.30",
+  "name": "weex-vue-s-render",
+  "description": "Web server renderer for weex project written in Vue DSL.",
+  "version": "1.0.2",
   "license": "Apache-2.0",
-  "main": "dist/index.common.js",
+  "main": "packages/weex-vue-render/src/index.js",
   "keywords": [
     "weex",
     "vue",
@@ -13,6 +13,7 @@
     "renderer",
     "weex-vue",
     "weex-vue-render",
+    "weex-vue-s-render",
     "weex-web",
     "weex-h5",
     "next"
@@ -47,7 +48,6 @@
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.16.2",
     "fs-extra": "^5.0.0",
-    "httpurl": "^0.1.2",
     "ip": "^1.1.5",
     "karma": "^1.7.1",
     "karma-coverage": "^1.1.1",
@@ -86,7 +86,12 @@
     "weex-loader": "^0.5.3",
     "weex-styler": "^0.2.2",
     "weex-vue-precompiler": "^0.1.18",
-    "wxv-transformer": "^0.1.3",
     "zlib": "^1.0.5"
+  },
+  "dependencies": {
+    "httpurl": "^0.1.2",
+    "jsdom": "^12.0.0",
+    "query-string": "^6.1.0",
+    "wxv-transformer": "^0.1.3"
   }
 }
