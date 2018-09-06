@@ -26,7 +26,7 @@ const webpack = require('webpack')
 const exec = require('child_process').execSync
 const pkg = require('../package.json')
 const chalk = require('chalk')
-
+const cssnano = require('cssnano')
 const rollup = require('rollup')
 const watch = require('rollup-watch')
 const json = require('rollup-plugin-json')
@@ -70,16 +70,16 @@ const configs = {
       name: 'WeexVueRender',
       file: resolve('packages/weex-vue-s-render/dist/index.js'),
       format: 'umd',
-      banner:`\nconsole.log('START WEEX VUE RENDER: ${version}, Build ${now()}.');\n\n`
+      banner:`\n// START WEEX VUE RENDER: ${version}, Build ${now()}.'\n\n`
     },
     plugins: [
       postcss({
         plugins: [
           require('autoprefixer')({
             browsers: ['> 0.1%', 'ios >= 8', 'not ie < 12']
-          })
+          }), cssnano
         ],
-        // extract: 'packages/weex-vue-s-render/dist/css/bundle.css'
+        extract: 'packages/weex-vue-s-render/dist/css/bundle.css'
       }),
       nodeResolve({
         jsnext: true,

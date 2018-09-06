@@ -34,7 +34,7 @@ var webConfig = merge(baseConfig, {
       test: /\.vue$/,
       loader: 'vue-loader',
       options: vueLoaderConfig
-    }]
+    }],
   },
   output: {
     filename: '[name].js'
@@ -53,7 +53,7 @@ var nativeConfig = merge(baseConfig, {
     rules: [{
       test: /\.vue$/,
       loader: 'weex-loader'
-    }]
+    }],
   },
   output: {
     filename: '[name].js'

@@ -44,7 +44,7 @@ export function setVue (vue) {
   }
   global.weex.__vue__ = vue
   weex.install(renderFunctionPlugin)
-  console.log(`[Vue Render] install Vue ${vue.version}.`)
+  // console.log(`[Vue Render] install Vue ${vue.version}.`)
 }
 
 export default weex

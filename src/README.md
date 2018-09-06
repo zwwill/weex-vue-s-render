@@ -21,7 +21,7 @@ If you perfer cdn way, and use script tag to import a script link, just import i
 
 ```html
 <script>{{Vue}}</script>
-<script>{{weex-vue-s-renderr}}</script>
+<script>{{weex-vue-s-render}}</script>
 <script>{{your js bundle}}</script>
 ```
 

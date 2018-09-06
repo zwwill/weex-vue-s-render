@@ -1,16 +1,16 @@
 {
   "name": "weex-vue-s-render",
-  "version": "1.0.3-4",
+  "version": "1.0.4",
   "description": "Web renderer for weex project written in Vue DSL.",
   "license": "Apache-2.0",
-  "main": "dist/index.js",
+  "main": "dist/index.common.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:weexteam/weex-vue-render.git"
+    "url": "git@github.com:weexteam/weex-vue-s-render.git"
   },
-  "homepage": "https://github.com/weexteam/weex-vue-render",
+  "homepage": "https://github.com/weexteam/weex-vue-s-render",
   "bugs": {
-    "url": "https://github.com/weexteam/weex-vue-render/issues"
+    "url": "https://github.com/weexteam/weex-vue-s-render/issues"
   },
   "keywords": [
     "weex",
@@ -20,7 +20,7 @@
     "web-render",
     "renderer",
     "weex-vue",
-    "weex-vue-render",
+    "weex-vue-s-render",
     "weex-web",
     "weex-h5",
     "next"
