@@ -1,9 +1,9 @@
 {
-  "name": "weex-vue-render",
-  "version": "1.0.2",
+  "name": "weex-vue-s-render",
+  "version": "1.0.3-4",
   "description": "Web renderer for weex project written in Vue DSL.",
   "license": "Apache-2.0",
-  "main": "dist/index.common.js",
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:weexteam/weex-vue-render.git"

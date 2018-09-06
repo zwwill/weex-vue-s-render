@@ -78,7 +78,8 @@ const configs = {
           require('autoprefixer')({
             browsers: ['> 0.1%', 'ios >= 8', 'not ie < 12']
           })
-        ]
+        ],
+        // extract: 'packages/weex-vue-s-render/dist/css/bundle.css'
       }),
       nodeResolve({
         jsnext: true,

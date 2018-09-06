@@ -1,5 +1,5 @@
 
-console.log('START WEEX VUE RENDER: 1.0.2, Build 2018-09-06 17:45.');
+console.log('START WEEX VUE RENDER: 1.0.3, Build 2018-09-06 20:10.');
 
 
 (function (global, factory) {
@@ -3902,7 +3902,7 @@ function initEnv (viewportInfo, envInfo) {
   var osVersion = envInfo.os.version.val;
   var env = {
     platform: 'Web',
-    weexVersion: '1.0.2',
+    weexVersion: '1.0.3',
     userAgent: navigator.userAgent,
     appName: browserName,
     appVersion: browserVersion,

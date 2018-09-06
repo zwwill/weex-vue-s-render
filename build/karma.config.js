@@ -18,7 +18,7 @@
  */
 const path = require('path')
 const getConfig = require('./build').getConfig
-const rollupConfig = require('./build').getConfig('weex-vue-render', true)
+const rollupConfig = require('./build').getConfig('weex-vue-s-render', true)
 const resolve = require('./utils').resolve
 
 const removeConfigs = ['input', 'output']
@@ -96,8 +96,8 @@ module.exports = function (config) {
         }
       },
       reporters: [
-        { type: 'html', dir: resolve('coverage'), subdir: 'weex-vue-render' },
-        { type: 'text-summary', dir: resolve('coverage'), subdir: 'weex-vue-render' }
+        { type: 'html', dir: resolve('coverage'), subdir: 'weex-vue-s-render' },
+        { type: 'text-summary', dir: resolve('coverage'), subdir: 'weex-vue-s-render' }
       ]
     },
     browserDisconnectTimeout: 10000,

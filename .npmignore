@@ -4,3 +4,8 @@
 /examples
 /config
 /build
+/.idea
+.babelrc
+.gitignore
+.eslintrc
+.travis.yml

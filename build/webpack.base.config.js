@@ -3,7 +3,6 @@ const webpack = require('webpack')
 const merge = require('webpack-merge')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const vueLoaderConfig = require('./vue-loader.config.js')
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const config = require('../config')
 const { resolve } = require('./utils')
 const { getWebEntries, getNativeEntries } = require('./get-entries')
@@ -17,7 +16,7 @@ var baseConfig = {
   },
   resolve: {
     alias: {
-      'weex-vue-render': resolve('packages/weex-vue-render/dist/index.common')
+      'weex-vue-s-render': resolve('packages/weex-vue-s-render/dist/index.common')
     }
   },
   module: {
@@ -35,15 +34,6 @@ var webConfig = merge(baseConfig, {
       test: /\.vue$/,
       loader: 'vue-loader',
       options: vueLoaderConfig
-    },{
-      test: /\.css$/,
-      loader: ExtractTextPlugin.extract({
-        use: [
-          {
-            loader: 'css-loader'
-          }
-        ]
-      })
     }]
   },
   output: {
@@ -54,8 +44,7 @@ var webConfig = merge(baseConfig, {
       banner: '// NOTE: for vue2.0 and platform:web only.\n',
       raw: true,
       exclude: 'Vue'
-    }),
-    new ExtractTextPlugin('css/[name].css')
+    })
   ]
 })
 
