@@ -26,7 +26,6 @@ const webpack = require('webpack')
 const exec = require('child_process').execSync
 const pkg = require('../package.json')
 const chalk = require('chalk')
-const cssnano = require('cssnano')
 const rollup = require('rollup')
 const watch = require('rollup-watch')
 const json = require('rollup-plugin-json')
@@ -77,7 +76,7 @@ const configs = {
         plugins: [
           require('autoprefixer')({
             browsers: ['> 0.1%', 'ios >= 8', 'not ie < 12']
-          }), cssnano
+          })
         ],
         extract: 'packages/weex-vue-s-render/dist/css/bundle.css'
       }),
