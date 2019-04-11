@@ -221,7 +221,7 @@ if (!window._rmInjected) {
   HTMLElement.prototype.removeChild = function (el) {
     el._visible && triggerAppearEvent(el, 'disappear', null)
     el._offsetVisible && triggerAppearEvent(el, 'offsetDisappear', null)
-    nativeRemove.apply(this, arguments)
+    return nativeRemove.apply(this, arguments)
   }
 }
 
