@@ -84,7 +84,7 @@ function fireEvent(element, type, extra) {
    */ 
   event._for = 'weex'
 
-  element.dispatchEvent(event)
+  element && element.dispatchEvent(event)
 }
 
 /**
